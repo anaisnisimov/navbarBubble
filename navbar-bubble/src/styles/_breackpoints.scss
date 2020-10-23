@@ -1,0 +1,42 @@
+@mixin breakpoint($point) {
+  @if $point == maxi-maxi-papa-bear {
+    @media (max-width: 4500px) { @content; }
+  }
+  @if $point == maxi-papa-bear {
+    @media (max-width: 3000px) { @content; }
+  }
+   @if $point == big-papa-bear {
+    @media (max-width: 2400px) { @content; }
+  }
+  @if $point == littlebig-papa-bear {
+    @media (max-width: 1900px) { @content; }
+  }
+  @if $point == papa-bear {
+    @media (max-width: 1600px) { @content; }
+  }
+  @if $point == papabro-bear {
+    @media (max-width: 1400px) { @content; }
+  }
+  @else if $point == mama-bear {
+    @media (max-width: 1250px) { @content; }
+  }
+  @else if $point == aunt-bear {
+    @media (max-width: 1024px)  { @content; }
+  }
+  @else if $point == uncle-bear {
+    @media (max-width: 962px)  { @content; }
+  }
+  @else if $point == babydouble-bear {
+   @media (max-width: 850px)  { @content; }
+ }
+  @else if $point == baby-bear {
+    @media (max-width: 650px)  { @content; }
+  }
+    @else if $point == babybaby-bear {
+    @media (max-width: 550px)  { @content; }
+  }
+  @else if $point == littlebaby-bear {
+    @media (max-width: 450px)  { @content; }
+  }
+ 
+}

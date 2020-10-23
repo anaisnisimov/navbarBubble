@@ -1,0 +1,540 @@
+@import 'src/styles/vars';
+@import 'src/styles/breackpoints';
+
+#Navbar {
+  width:100%;
+
+  // Menu center bubble
+    &-bubbleContainer{
+        width:100%;
+        display:flex;
+        align-items: center;
+        justify-content: center;
+        // background-color: red;
+    }
+    &-FigureFullCircle{
+    width: 83%;
+     z-index:5;
+    position:absolute;
+    border-radius: 50%; 
+        @include breakpoint(mama-bear) { width: 80%;}
+      @include breakpoint(aunt-bear) { width: 78%;}
+      @include breakpoint(uncle-bear) { width: 75%;}
+      @include breakpoint(babydouble-bear) { width: 70%;}
+      @include breakpoint(baby-bear) { width: 63%;}
+      @include breakpoint(babybaby-bear) { width: 58%;}
+      @include breakpoint(littlebaby-bear) { width: 48%;}
+    }
+
+    &-FigureLineCircle{
+            width:100%;
+            position : relative;
+            // background-color: pink;
+    }
+    &-circle{
+        fill:$backgroundBubbleNavbar;
+        opacity:0.5;
+        transition : all .5s ease-in-out; 
+    }
+  
+    &-circle:hover{
+        fill: $backgroundBubbleNavbarHover;
+        cursor:pointer;
+        transform:scale(1.03);
+    }
+  
+        //animation part 
+
+        @mixin linear-animation($duration) {
+        $name: linear-#{unique-id()};
+
+        @keyframes #{$name} {
+            @content;
+        }
+
+        animation-name: $name;
+        animation-duration: $duration;
+        animation-iteration-count: infinite;
+        }
+
+        &-lineCircle {
+        fill:transparent;
+            stroke:$backgroundStrokeLine;
+            stroke-width:0.02em;
+        @include linear-animation(7s) {
+                from { 
+                    transform: rotate(0deg);
+                    transform-origin: 50px 50px;
+
+                }
+                to { 
+                    transform: rotate(-360deg); 
+                    transform-origin: 50px 53px;
+                }
+            }
+
+        }
+    
+
+
+  &-title{
+    font-family: AW Conqueror Didot Light;
+    font-size:0.45em;
+    z-index:6;
+    color: $colorTextNavbar;
+    cursor:pointer;
+
+  }
+  &-subtitle{
+    z-index:6;
+    font-family: AW Conqueror Didot Light;
+    font-size:0.3em;
+    text-align:center;
+    cursor:pointer;
+
+    
+  }
+
+  // multiple menu 
+ &-MenuContainer{
+     width:100%;
+
+    }
+    
+  &-circleMenu{
+    fill:$backgroundBubbleNavbar;
+    opacity:0.5;
+    transition : all .5s ease-in-out;
+  }
+  &-circleMenu:hover{
+    fill: $backgroundBubbleNavbarHover;
+    cursor:pointer;
+    transform:scale(1.015);
+   
+  }
+ 
+        
+     &-containerAllMenu{
+    position: relative; 
+    width: 40%; 
+    // border: dashed 1px; 
+    border-radius: 50%; 
+    margin: 10.75em auto 0; 
+    }
+
+ &-FigureFullCircle-deg0, &-FigureFullCircle-deg45,&-FigureFullCircle-deg315,&-FigureFullCircle-deg180,&-FigureFullCircle-deg225,&-FigureFullCircle-deg135{
+    display: block; 
+    position: absolute; 
+    top: 50%; left: 50%; 
+    margin: -2em; 
+    z-index:5;
+    
+}
+
+&-FigureFullCircle-deg0 { 
+    width:34%;
+    position:absolute;
+    transform: rotate(350deg) translate(24em) rotate(-350deg); 
+    @include breakpoint(maxi-maxi-papa-bear) { 
+    transform: rotate(350deg) translate(54em) rotate(-350deg)
+    }
+     @include breakpoint(maxi-papa-bear) { 
+    transform: rotate(350deg) translate(44em) rotate(-350deg)
+    }
+     @include breakpoint(big-papa-bear) { 
+    transform: rotate(350deg) translate(34em) rotate(-350deg)
+    }
+      @include breakpoint(littlebig-papa-bear) { 
+    transform: rotate(350deg) translate(28em) rotate(-350deg)
+    }
+      @include breakpoint(papa-bear) { 
+    transform: rotate(350deg) translate(26em) rotate(-350deg)
+    }
+       @include breakpoint(papabro-bear) { 
+    transform: rotate(350deg) translate(22em) rotate(-350deg)
+    }
+      @include breakpoint(mama-bear) { 
+    transform: rotate(350deg) translate(20em) rotate(-350deg);
+    width:32%;
+
+    }
+      @include breakpoint(aunt-bear) { 
+    transform: rotate(350deg) translate(14em) rotate(-350deg);
+    width:30%;
+
+    }
+      @include breakpoint(uncle-bear) { 
+    transform: rotate(350deg) translate(12em) rotate(-350deg);
+    width:28%;
+
+    }
+      @include breakpoint(baby-bear) { 
+    transform: rotate(350deg) translate(8em) rotate(-350deg);
+    width:26%;
+
+    }
+       @include breakpoint(babybaby-bear) { 
+    transform: rotate(350deg) translate(8em) rotate(-350deg);
+    width:26%;
+
+    }
+      @include breakpoint(littlebaby-bear) { 
+    transform: rotate(350deg) translate(6em) rotate(-350deg);
+    width:26%;
+
+    }
+
+ 
+} 
+&-titleMenu-deg0{
+font-family: AW Conqueror Didot Light;
+font-size:0.6em;
+z-index:6;
+color: $colorTextNavbar;
+cursor:pointer;
+
+}
+
+
+&-FigureFullCircle-deg45 { 
+    width:30%;
+    transform: rotate(30deg) translate(19em) rotate(-30deg);
+    @include breakpoint(maxi-maxi-papa-bear) { 
+   transform: rotate(24deg) translate(54em) rotate(-24deg);
+
+    }
+     @include breakpoint(maxi-papa-bear) { 
+    transform: rotate(30deg) translate(44em) rotate(-30deg)
+    }
+     @include breakpoint(big-papa-bear) { 
+    transform: rotate(24deg) translate(34em) rotate(-24deg)
+    }
+      @include breakpoint(littlebig-papa-bear) { 
+    transform: rotate(24deg) translate(28em) rotate(-24deg)
+    }
+      @include breakpoint(papa-bear) { 
+    transform: rotate(30deg) translate(26em) rotate(-30deg)
+    }
+       @include breakpoint(papabro-bear) { 
+    transform: rotate(30deg) translate(22em) rotate(-30deg)
+    }
+      @include breakpoint(mama-bear) { 
+    transform: rotate(30deg) translate(20em) rotate(-30deg);
+    width:28%;
+
+    }
+      @include breakpoint(aunt-bear) { 
+    transform: rotate(30deg) translate(14em) rotate(-30deg);
+    width:26%;
+    }
+      @include breakpoint(uncle-bear) { 
+    transform: rotate(30deg) translate(12em) rotate(-30deg);
+    width:24%;
+    }
+      @include breakpoint(baby-bear) { 
+    transform: rotate(30deg) translate(8em) rotate(-30deg);
+    width:22%;
+
+    }
+     @include breakpoint(babybaby-bear) { 
+    transform: rotate(30deg) translate(7em) rotate(-30deg);
+    width:22%;
+
+    }
+      @include breakpoint(littlebaby-bear) { 
+    transform: rotate(30deg) translate(6em) rotate(-30deg);
+    width:20%;
+
+    } 
+} 
+&-titleMenu-deg45{
+font-family: AW Conqueror Didot Light;
+font-size:0.6em;
+z-index:6;
+color: $colorTextNavbar;
+cursor:pointer;
+
+}
+
+&-FigureFullCircle-deg135 { 
+    width:48%;
+    transform: rotate(165deg) translate(33em) rotate(-165deg);
+     @include breakpoint(maxi-maxi-papa-bear) { 
+   transform: rotate(175deg) translate(57em) rotate(-175deg);
+
+    }
+     @include breakpoint(maxi-papa-bear) { 
+    transform: rotate(175deg) translate(57em) rotate(-175deg)
+    }
+     @include breakpoint(big-papa-bear) { 
+    transform: rotate(175deg) translate(49em) rotate(-175deg)
+    }
+      @include breakpoint(littlebig-papa-bear) { 
+    transform: rotate(170deg) translate(42em) rotate(-170deg)
+    }
+      @include breakpoint(papa-bear) { 
+    transform: rotate(165deg) translate(36em) rotate(-165deg)
+    }
+       @include breakpoint(papabro-bear) { 
+    transform: rotate(165deg) translate(32em) rotate(-165deg)
+    }
+      @include breakpoint(mama-bear) { 
+    transform: rotate(165deg) translate(26em) rotate(-165deg);
+    width:44%;
+
+    }
+      @include breakpoint(aunt-bear) { 
+    transform: rotate(165deg) translate(20em) rotate(-165deg);
+    width:42%;
+    }
+      @include breakpoint(uncle-bear) { 
+    transform: rotate(165deg) translate(18em) rotate(-165deg);
+    width:40%;
+    }
+      @include breakpoint(babydouble-bear) { 
+    transform: rotate(165deg) translate(14em) rotate(-165deg);
+    width:38%;
+    }
+      @include breakpoint(baby-bear) { 
+    transform: rotate(165deg) translate(9em) rotate(-165deg);
+    width:36%;
+    }
+      @include breakpoint(babybaby-bear) { 
+    transform: rotate(155deg) translate(7em) rotate(-155deg);
+    width:36%;
+    }
+      @include breakpoint(littlebaby-bear) { 
+    transform: rotate(155deg) translate(5em) rotate(-155deg);
+    width:36%;
+
+    } 
+     
+} 
+&-titleMenu-deg135{
+font-family: AW Conqueror Didot Light;
+font-size:0.45em;
+z-index:6;
+color: $colorTextNavbar;
+cursor:pointer;
+
+}
+&-FigureFullCircle-deg180 { 
+    width:25%; 
+    transform: rotate(188deg) translate(24em) rotate(-188deg) ; 
+       @include breakpoint(maxi-maxi-papa-bear) { 
+   transform: rotate(188deg) translate(57em) rotate(-188deg);
+
+    }
+     @include breakpoint(maxi-papa-bear) { 
+    transform: rotate(188deg) translate(57em) rotate(-188deg)
+    }
+     @include breakpoint(big-papa-bear) { 
+    transform: rotate(198deg) translate(35em) rotate(-198deg)
+    }
+      @include breakpoint(littlebig-papa-bear) { 
+    transform: rotate(198deg) translate(32em) rotate(-198deg)
+    }
+      @include breakpoint(papa-bear) { 
+    transform: rotate(188deg) translate(26em) rotate(-188deg)
+    }
+       @include breakpoint(papabro-bear) { 
+    transform: rotate(188deg) translate(23em) rotate(-188deg)
+    }
+      @include breakpoint(mama-bear) { 
+    transform: rotate(188deg) translate(18em) rotate(-188deg);
+    width:23%; 
+    }
+      @include breakpoint(aunt-bear) { 
+    transform: rotate(188deg) translate(15em) rotate(-188deg);
+    width:21%; 
+    }
+      @include breakpoint(uncle-bear) { 
+    transform: rotate(188deg) translate(13em) rotate(-188deg);
+    width:19%; 
+
+    }
+      @include breakpoint(babydouble-bear) { 
+    transform: rotate(188deg) translate(10em) rotate(-188deg);
+    width:17%; 
+
+    }
+      @include breakpoint(baby-bear) { 
+    transform: rotate(188deg) translate(6em) rotate(-188deg);
+    width:17%; 
+
+    }
+      @include breakpoint(babybaby-bear) { 
+    transform: rotate(178deg) translate(4em) rotate(-178deg);
+    width:17%; 
+
+    }
+      @include breakpoint(littlebaby-bear) { 
+    transform: rotate(178deg) translate(3em) rotate(-178deg);
+    width:17%; 
+
+    } 
+} 
+&-titleMenu-deg180{
+font-family: AW Conqueror Didot Light;
+font-size:0.9em;
+z-index:6;
+color: $colorTextNavbar;
+cursor:pointer;
+
+}
+&-FigureFullCircle-deg225 { 
+    width:30%;
+    transform: rotate(215deg) translate(35em) rotate(-215deg);
+       @include breakpoint(maxi-maxi-papa-bear) { 
+   transform: rotate(215deg) translate(57em) rotate(-215deg);
+
+    }
+     @include breakpoint(maxi-papa-bear) { 
+    transform: rotate(215deg) translate(57em) rotate(-215deg)
+    }
+     @include breakpoint(big-papa-bear) { 
+    transform: rotate(215deg) translate(49em) rotate(-215deg)
+    }
+      @include breakpoint(littlebig-papa-bear) { 
+    transform: rotate(215deg) translate(42em) rotate(-215deg)
+    }
+      @include breakpoint(papa-bear) { 
+    transform: rotate(215deg) translate(36em) rotate(-215deg)
+    }
+       @include breakpoint(papabro-bear) { 
+    transform: rotate(215deg) translate(32em) rotate(-215deg)
+    }
+      @include breakpoint(mama-bear) { 
+    transform: rotate(215deg) translate(26em) rotate(-215deg);
+    width:28%;
+
+    }
+      @include breakpoint(aunt-bear) { 
+    transform: rotate(215deg) translate(20em) rotate(-215deg);
+    width:26%;
+
+    }
+      @include breakpoint(uncle-bear) { 
+    transform: rotate(215deg) translate(18em) rotate(-215deg);
+    width:24%;
+
+    }
+      @include breakpoint(babydouble-bear) { 
+    transform: rotate(215deg) translate(14em) rotate(-215deg);
+    width:22%;
+
+    }
+      @include breakpoint(babybaby-bear) { 
+    transform: rotate(215deg) translate(12em) rotate(-215deg);
+    width:20%;
+
+    }
+      @include breakpoint(baby-bear) { 
+    transform: rotate(215deg) translate(9em) rotate(-215deg);
+    width:20%;
+
+    }
+     @include breakpoint(babybaby-bear) { 
+    transform: rotate(200deg) translate(6em) rotate(-200deg);
+    width:20%;
+
+    }
+      @include breakpoint(littlebaby-bear) { 
+    transform: rotate(200deg) translate(5.5em) rotate(-200deg);
+    width:20%;
+
+    } 
+ } 
+
+ &-titleMenu-deg225{
+font-family: AW Conqueror Didot Light;
+font-size:0.7em;
+z-index:6;
+color: $colorTextNavbar;
+cursor:pointer;
+
+}
+&-FigureFullCircle-deg315 { 
+   width:48%;
+    transform: rotate(300deg) translate(27em) rotate(-300deg);
+     @include breakpoint(maxi-maxi-papa-bear) { 
+   transform: rotate(300deg) translate(70em) rotate(-300deg);
+
+    }
+     @include breakpoint(maxi-papa-bear) { 
+    transform: rotate(300deg) translate(45em) rotate(-300deg)
+    }
+     @include breakpoint(big-papa-bear) { 
+    transform: rotate(307deg) translate(40em) rotate(-307deg)
+    }
+      @include breakpoint(littlebig-papa-bear) {     
+          transform: rotate(303deg) translate(32em) rotate(-303deg)
+
+    }
+      @include breakpoint(papa-bear) { 
+    transform: rotate(300deg) translate(28em) rotate(-300deg)
+    }
+       @include breakpoint(papabro-bear) { 
+    transform: rotate(300deg) translate(24em) rotate(-300deg)
+    }
+      @include breakpoint(mama-bear) { 
+    transform: rotate(300deg) translate(22em) rotate(-300deg);
+    width:44%;
+    }
+      @include breakpoint(aunt-bear) { 
+    transform: rotate(300deg) translate(18em) rotate(-300deg);
+    width:42%;
+
+    }
+      @include breakpoint(uncle-bear) { 
+    transform: rotate(300deg) translate(15em) rotate(-300deg);
+    width:40%;
+
+    }
+        @include breakpoint(babydouble-bear) { 
+    transform: rotate(300deg) translate(13em) rotate(-300deg);
+    width:38%;
+
+    }
+      @include breakpoint(baby-bear) { 
+    transform: rotate(300deg) translate(9em) rotate(-300deg);
+    width:36%;
+
+    }
+      @include breakpoint(babybaby-bear) { 
+    transform: rotate(300deg) translate(7em) rotate(-300deg);
+    width:36%;
+
+    }
+      @include breakpoint(littlebaby-bear) { 
+    transform: rotate(300deg) translate(5em) rotate(-300deg);
+    width:36%;
+
+    } 
+ } 
+ &-titleMenu-deg315{
+font-family: AW Conqueror Didot Light;
+font-size:0.45em;
+z-index:6;
+color: $colorTextNavbar;
+cursor:pointer;
+
+}
+
+
+        
+ }
+
+ .nav {
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+
+}
+.nav--open {
+  opacity: 1;
+  transition: opacity 1s ease-in-out;
+}
+
+
+
+   
