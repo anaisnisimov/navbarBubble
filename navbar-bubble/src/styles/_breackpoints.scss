@@ -37,6 +37,5 @@
   }
   @else if $point == littlebaby-bear {
     @media (max-width: 450px)  { @content; }
-  }
- 
+  } 
 }

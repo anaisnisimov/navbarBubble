@@ -1,17 +1,17 @@
 export default [
     {
         //navbar part
-        navbarHome:[
+        navbarHome: [
             {
-                id:1,
+                id: 1,
                 name: 'Suzy Nisimov-Schlomoff',
-                subtitle:' Sophrologie, Réflexologie',
+                subtitle: 'Sophrologue & Réflexologue ',
             }
         ],
         navbar: [
             {
-                id:1,
-                name:'À propos',
+                id: 1,
+                name: 'À propos',
             },
             {
                 id: 2,
@@ -33,7 +33,28 @@ export default [
                 id: 6,
                 name: 'Témoignages',
             },
-            
+
+        ],
+        about: [
+            {
+                id: 1,
+                image: 'src/assets/suzy.png',
+                title: "Master spécialiste en Sophrologie Caycédienne",
+                description: [
+                    {
+                        id: 1,
+                        phrase: " Après un parcours dans différents domaines dont la décoration, la mode, le marketing,  Suzy Nisimov-Schlomoff perçoit que, dans la plupart des secteurs professionnels, le stress est toujours très présent et la dimension des valeurs humaines est souvent masquée, ceci quelque soit la fonction hiérarchique des individus."
+                    },
+
+                    {
+                        id: 2,
+                        phrase: " La rencontre avec la Sophrologie est un des chemins qui conduit à instaurer plus de bien être et d’humanisme dans tous les domaines et étapes de la vie quels qu’ils soient."
+                    },
+
+
+                ],
+
+            }
         ],
 
     },

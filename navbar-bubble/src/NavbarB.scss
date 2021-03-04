@@ -10,26 +10,44 @@
         display:flex;
         align-items: center;
         justify-content: center;
-        // background-color: red;
     }
     &-FigureFullCircle{
     width: 83%;
      z-index:5;
     position:absolute;
-    border-radius: 50%; 
-        @include breakpoint(mama-bear) { width: 80%;}
-      @include breakpoint(aunt-bear) { width: 78%;}
-      @include breakpoint(uncle-bear) { width: 75%;}
-      @include breakpoint(babydouble-bear) { width: 70%;}
-      @include breakpoint(baby-bear) { width: 63%;}
-      @include breakpoint(babybaby-bear) { width: 58%;}
-      @include breakpoint(littlebaby-bear) { width: 48%;}
+    border-radius: 50%;
+    @include breakpoint(maxi-maxi-papa-bear) { width: 90%;}
+    @include breakpoint(maxi-papa-bear) { width: 85%;}
+    @include breakpoint(big-papa-bear) { width: 80%;}
+    @include breakpoint(littlebigpapabear-bear) { width: 78%;}
+    @include breakpoint(papa-bear) { width: 80%;}
+    @include breakpoint(papabro-bear) { width: 78%;} 
+    @include breakpoint(mama-bear) { width: 80%;}
+    @include breakpoint(aunt-bear) { width: 78%;}
+    @include breakpoint(uncle-bear) { width: 75%;}
+    @include breakpoint(babydouble-bear) { width: 70%;}
+    @include breakpoint(baby-bear) { width: 63%;}
+    @include breakpoint(babybaby-bear) { width: 58%;}
+    @include breakpoint(littlebaby-bear) { width: 48%;}
     }
 
     &-FigureLineCircle{
             width:100%;
             position : relative;
-            // background-color: pink;
+            @include breakpoint(maxi-maxi-papa-bear) { width: 90%;}
+    @include breakpoint(maxi-papa-bear) { width: 90%;}
+    @include breakpoint(big-papa-bear) { width: 85%;}
+    @include breakpoint(littlebigpapabear-bear) { width: 80%;}
+    @include breakpoint(papa-bear) { width: 80%;}
+    @include breakpoint(papabro-bear) { width: 80%;} 
+    @include breakpoint(mama-bear) { width: 80%;}
+    @include breakpoint(aunt-bear) { width: 78%;}
+    @include breakpoint(uncle-bear) { width: 75%;}
+    @include breakpoint(babydouble-bear) { width: 70%;}
+    @include breakpoint(baby-bear) { width: 63%;}
+    @include breakpoint(babybaby-bear) { width: 58%;}
+    @include breakpoint(littlebaby-bear) { width: 48%;}
+           
     }
     &-circle{
         fill:$backgroundBubbleNavbar;
@@ -118,7 +136,7 @@
     position: relative; 
     width: 40%; 
     // border: dashed 1px; 
-    border-radius: 50%; 
+    // border-radius: 50%; 
     margin: 10.75em auto 0; 
     }
 
